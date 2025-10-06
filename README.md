@@ -99,21 +99,6 @@ FROM cohort_monthly;
 
 `FIRST_VALUE` window function captures the initial cohort size (Month 0) to calculate retention percentages.
 
-#### 5. Lifetime Value Tracking
-Computed cumulative revenue for LTV analysis:
-
-```sql
-CREATE OR REPLACE VIEW cohort_ltv AS
-SELECT
-  cohort_month,
-  cohort_index,
-  revenue,
-  SUM(revenue) OVER (PARTITION BY cohort_month ORDER BY cohort_index 
-    ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS cumulative_revenue
-FROM cohort_monthly;
-```
-
-The running total shows how lifetime value accumulates as cohorts age.
 
 ## Visualization
 
