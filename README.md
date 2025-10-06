@@ -159,7 +159,7 @@ Track cohort retention monthly and compare new cohorts against historical benchm
 
 ## Dashboard Visualization
 
-![Customer Retention Heatmap](screenshots/retention_heatmap.png)
+![Customer Retention Heatmap](img/Customer_retention_analysis.png)
 *Retention heatmap showing customer activity patterns across cohorts. Blue indicates high retention (100%), white shows moderate retention (50%), and red represents low retention (0%).*
 
 ## Technologies Used
