@@ -100,14 +100,11 @@ FROM cohort_monthly;
 `FIRST_VALUE` window function captures the initial cohort size (Month 0) to calculate retention percentages.
 
 
-## Visualization
 
-Created a retention heatmap in Google Looker Studio using:
-- **Chart Type**: Pivot Table with conditional formatting
-- **Rows**: cohort_month (sorted ascending)
-- **Columns**: cohort_index (0-12 months)
-- **Values**: retention_pct
-- **Color Scale**: Red (0%) → White (50%) → Blue (100%)
+## Dashboard Visualization
+
+![Customer Retention Heatmap](img/Customer_retention_analysis.png)
+*Retention heatmap showing customer activity patterns across cohorts. Blue indicates high retention (100%), white shows moderate retention (50%), and red represents low retention (0%).*
 
 ## Key Findings
 
@@ -142,10 +139,6 @@ Retention follows a predictable curve: rapid drop in months 0-3 (50-80% loss), g
 ### Measurement
 Track cohort retention monthly and compare new cohorts against historical benchmarks. A/B test retention strategies on new customer cohorts.
 
-## Dashboard Visualization
-
-![Customer Retention Heatmap](img/Customer_retention_analysis.png)
-*Retention heatmap showing customer activity patterns across cohorts. Blue indicates high retention (100%), white shows moderate retention (50%), and red represents low retention (0%).*
 
 ## Technologies Used
 - Google Cloud SQL (MySQL 8.0.41)
